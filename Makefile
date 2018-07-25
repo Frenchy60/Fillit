@@ -6,7 +6,7 @@
 #    By: agraton <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/24 14:48:54 by agraton           #+#    #+#              #
-#    Updated: 2018/07/25 17:35:03 by fverhuls         ###   ########.fr        #
+#    Updated: 2018/07/25 17:54:48 by fverhuls         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(OBJ)
 	gcc $(FLAG) $(OPTION) $(SRC)
 
 clean:

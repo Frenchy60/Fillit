@@ -6,7 +6,7 @@
 /*   By: fverhuls <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/05 18:48:23 by fverhuls          #+#    #+#             */
-/*   Updated: 2018/07/25 17:28:22 by fverhuls         ###   ########.fr       */
+/*   Updated: 2018/07/25 18:39:07 by fverhuls         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 
 int			checkpiece(char *str);
 int			checklinks(char *str);
+
+void		clearstr(char *str)
+{
+	int		i;
+
+	i = -1;
+	while (++i < 21)
+		str[i] = '\0';
+}
 
 int			checkfile(int fd)
 {
@@ -25,8 +34,11 @@ int			checkfile(int fd)
 	str = malloc(sizeof(char) * 21);
 	*str = '\n';
 	str[20] = '\0';
-	while (*str == '\n')
+	while (count == 0 || read(fd, str, 1))
 	{
+		if (*str != '\n')
+			return (-1);
+		clearstr(str);
 		count++;
 		if (!(read(fd, str, 20)))
 		{
@@ -34,14 +46,10 @@ int			checkfile(int fd)
 		}
 		if (checkpiece(str) != 0 || checklinks(str) != 0)
 			return (-1);
-		if (read(fd, str, 1) && *str != '\n')
-		{
+		if (count > 26)
 			return (-1);
-		}
 	}
-	if (count <= 26)
-		return (0);
-	return (-1);
+	return (0);
 }
 
 int			checkpiece(char *str)
