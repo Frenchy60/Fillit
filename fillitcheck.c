@@ -6,15 +6,11 @@
 /*   By: fverhuls <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/05 18:48:23 by fverhuls          #+#    #+#             */
-/*   Updated: 2018/07/25 18:39:07 by fverhuls         ###   ########.fr       */
+/*   Updated: 2018/07/25 19:09:38 by fverhuls         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-
-int			checkpiece(char *str);
-int			checklinks(char *str);
+#include "t_pent.h"
 
 void		clearstr(char *str)
 {

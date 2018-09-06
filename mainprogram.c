@@ -6,16 +6,11 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/19 13:12:55 by agraton           #+#    #+#             */
-/*   Updated: 2018/07/21 15:47:35 by agraton          ###   ########.fr       */
+/*   Updated: 2018/07/31 18:12:31 by fverhuls         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "t_pent.h"
-
-int			getlistsize(t_pent *list);
-char		**newar(int x, int y, char c);
-int			getscore(char **board, int size);
 
 void		removetet(char **ar, char **board, int size)
 {
@@ -69,7 +64,6 @@ int			printsolution(char **board, int size)
 			write(1, &board[i][j], 1);
 		write(1, "\n", 1);
 	}
-	write(1, "\n", 1);
 	return (0);
 }
 

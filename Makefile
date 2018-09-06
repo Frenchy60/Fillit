@@ -6,7 +6,7 @@
 #    By: agraton <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/24 14:48:54 by agraton           #+#    #+#              #
-#    Updated: 2018/07/25 17:54:48 by fverhuls         ###   ########.fr        #
+#    Updated: 2018/07/31 18:14:23 by fverhuls         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ $(NAME): $(OBJ)
 	gcc $(FLAG) $(OPTION) $(SRC)
 
 clean:
-	/bin/rm -f *.o
+	/bin/rm -f $(OBJ)
 
 fclean: clean
 	/bin/rm -f $(NAME)

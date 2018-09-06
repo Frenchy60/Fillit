@@ -6,11 +6,10 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/04 02:56:07 by agraton           #+#    #+#             */
-/*   Updated: 2018/07/21 15:46:44 by agraton          ###   ########.fr       */
+/*   Updated: 2018/07/27 17:21:47 by fverhuls         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "t_pent.h"
 
 t_pent			*createpentelem(char **pent, t_pent *next)
