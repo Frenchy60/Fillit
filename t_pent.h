@@ -6,7 +6,7 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/04 02:48:58 by agraton           #+#    #+#             */
-/*   Updated: 2018/07/25 19:12:42 by fverhuls         ###   ########.fr       */
+/*   Updated: 2018/09/06 17:01:50 by fverhuls         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ void					reverse(t_pent **begin_list);
 void					giveletters(t_pent *list, char c);
 void					startsearch(t_pent *list);
 int						checkfile(int fd);
+void					free_double_char_array(char **arr, int a);
+void					list_delete(t_pent **alst);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/04 04:59:23 by agraton           #+#    #+#             */
-/*   Updated: 2018/07/25 19:10:14 by fverhuls         ###   ########.fr       */
+/*   Updated: 2018/09/06 17:03:17 by fverhuls         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,6 @@ int			main(int argc, char **argv)
 	reverse(&list);
 	giveletters(list, 'A');
 	startsearch(list);
+	list_delete(&list);
 	return (0);
 }

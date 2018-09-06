@@ -6,7 +6,7 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/19 13:12:55 by agraton           #+#    #+#             */
-/*   Updated: 2018/07/31 18:12:31 by fverhuls         ###   ########.fr       */
+/*   Updated: 2018/09/06 17:04:42 by fverhuls         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,7 @@ void		startsearch(t_pent *list)
 	{
 		board = newar(i, i, '.');
 		flag = trysize(list, i, board);
+		free_double_char_array(board, i);
 		i++;
 	}
 }
